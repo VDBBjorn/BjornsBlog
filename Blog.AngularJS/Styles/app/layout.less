@@ -1,0 +1,75 @@
+﻿@import '../lib/Bootstrap/variables.less';
+@import 'elements.less';
+
+@baseMessageColor: #aaa;
+
+.topics {
+    .topic:hover {
+        cursor: pointer;
+        background: #eee;
+        .box-shadow(5px 5px 10px 5px rgba(221,221,221,1));
+    }
+}
+
+.topic {
+    .border-radius(5px, 5px, 5px, 5px);
+    background: none repeat scroll 0 0 lighten(@baseMessageColor, 25%);
+    border: 1px solid @baseMessageColor;
+    margin: 25px 0 25px 0;
+    padding: 10px 5px 10px 5px;
+
+
+
+    .content {
+
+        margin-bottom: 20px;
+
+        .title {
+            font-size: 2em;
+            font-weight: bold;
+            text-decoration: none;
+
+            .title-link {
+                color: #222;
+            }
+        }
+
+        .date {
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        .body {
+            margin: 15px 0px 5px 0;
+            color: #444;
+        }
+    }
+
+
+
+    .replies {
+        border-top: 1px solid @brand-primary;
+        padding: 5px 0 5px 0;
+
+        .reply {
+            .content {
+                border-bottom: 1px solid @brand-info;
+                padding: 10px 5px 10px 5px;
+                margin: 5px;
+            }
+
+            &:last-child .content {
+                border-bottom: none;
+            }
+
+            .date {
+                font-weight: normal;
+            }
+
+            .body {
+                margin: 5px 0px 5px 0px;
+            }
+        }
+    }
+}
+

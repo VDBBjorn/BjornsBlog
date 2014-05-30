@@ -1,0 +1,41 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+<html ng-app="@ViewBag.AngularModule">
+<head>
+    <meta charset="utf-8" />
+    <title>Bjorns Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    @Styles.Render("~/Styles/lib/Bootstrap/css")
+    @Styles.Render("~/Styles/lib/FontAwesome/css")
+    @Styles.Render("~/Styles/lib/Alertify/css")
+    @Styles.Render("~/Styles/app/css")
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+    <script src="~/Scripts/lib/other/modernizr-2.6.2.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="~/Scripts/lib/other/html5shiv.js"></script>
+        <script src="~/Scripts/lib/other/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+    <body>
+        
+        <div class="container">
+            @RenderBody()
+            <br />
+            <footer>
+                <p class="text-center">&copy; @DateTime.Now.Year - Bjorn Vandenbussche, Hogeschool Gent</p>
+            </footer>
+        </div>
+        @Scripts.Render("~/bundles/lib")
+        @Scripts.Render("~/bundles/app")
+        <script src="~/Scripts/lib/other/jquery.magnific-popup.min.js"></script>
+        <script src="~/Scripts/lib/other/jquery.nav.js"></script>
+        <script src="~/Scripts/lib/other/jquery.scrollTo.js"></script>
+        <script src="~/Scripts/lib/other/jquery.sticky.js"></script>
+        <script src="~/Scripts/lib/other/main.js"></script>
+        <script src="~/Scripts/lib/other/waypoints.min.js"></script>
+    </body>
+</html>

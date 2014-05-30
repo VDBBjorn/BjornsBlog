@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BjornsBlog.Entities.Reply">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAAAAAAABAAACAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Entities\Reply.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Topic" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BjornsBlog.Entities.Topic">
+    <Position X="11.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAACAAAAAAAAAEAAAAABAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Entities\Topic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Replies" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

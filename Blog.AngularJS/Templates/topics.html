@@ -1,0 +1,40 @@
+﻿
+
+<div class="progress progress-striped active" data-ng-show="isBusy">
+    <div class="progress-bar" style="width: 100%;"></div>
+</div>
+
+<section id="blog-teaser-section">
+    <div class="container blog-teaser-section">
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-xs-12">
+                <h1>Welcome to Bjorns Blog!</h1>
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-md-offset-1 col-md-10 col-xs-12">
+                <a href="/new-topic" class="btn btn-primary">
+                    <i class="fa fa-plus"></i> Nieuw bericht plaatsen
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <br/>
+            <div class="col-md-offset-1 col-md-10 col-xs-12" data-ng-hide="isBusy">
+                <ul id="blog-teaser" class="blog-wrapper bounceIn animated">
+                    <li class="col-md-5 post " data-ng-repeat="topic in data.topics | orderBy:'-creationDate'" data-ng-click="go('/topic/' + topic.id)">
+
+                        <div class="meta">
+                            <div class="date">{{ topic.creationDate | date:'medium'}}</div>
+                        </div>
+                        <div class="post-content">
+                            <h4 class="post-title"><a href="">{{ topic.title }}</a></h4>
+                            <p>{{ topic.body }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</section>
